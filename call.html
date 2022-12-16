@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+<body>
+	<script>
+	//call
+		var object={
+			name:"anitha",
+			age:"22",
+			qualification:"M.sc",
+		}
+		function myfunction(a,b,c){
+			console.log(this,a,b,c);
+		}
+		myfunction.call(object,1,2,3,);
+		
+		//apply
+		
+		myfunction.apply(object,[5,6,7]);
+		//bind
+		var obj=myfunction.bind(object,9,10,11);
+		obj();
+		
+		
+		//tmeplate literals
+		
+		var x="Pushpam";
+		console.log(`Anitha${x}`);
+		
+		//arrow function
+		var obje={
+			color:"yellow",
+		}
+		var object1={
+		norfunction (){
+			console.log(this);
+		var call =()=>{
+			console.log(this)
+		};
+		call();
+		},
+	};
+		object1.norfunction.call(obje);
+		
+		
+		
+		
+		
+	</script>
+</body>
+</html>
